@@ -132,18 +132,18 @@ def Heuristic2(s,d):
         if peut_jouer(s, m1): 
             ultra_menaces_j1 +=1
             #print('ultra menace j1 : ', m1)
-        if((m1+12 in menacesj1) or (m1-12 in menacesj1)): 
+        if((m1+nbColumns in menacesj1) or (m1-nbColumns in menacesj1)): 
                 score+=1000
-        if(m1+12 in menacesj2):
+        if(m1+nbColumns in menacesj2):
                 score-=40
 
     for m2 in menacesj2:
         if peut_jouer(s, m2): 
             #print('ultra menace j2 : ', m2)
             ultra_menaces_j2 +=1
-        if((m2+12 in menacesj2) or (m2-12 in menacesj2)): 
+        if((m2+nbColumns in menacesj2) or (m2-nbColumns in menacesj2)): 
                 score-=1000
-        if(m2+12 in menacesj1):
+        if(m2+nbColumns in menacesj1):
                 score+=40  
 
     if ultra_menaces_j1 > 1 : 
