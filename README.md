@@ -12,10 +12,10 @@ L'algorithme minimax visite l'arbre de jeu pour faire remonter à la racine une 
 
 La valeur de jeu est déterminer via l'élaboration d'une fonction heuristique évaluant le plateau et l'avantage de chacun des joueurs. La fonction heuristique implémentée dans ce code attribue un score positif lorsque l'avantage est au premier joueur et négatif pour le second joeur. 
 
-De manière simplifiée, l'heuristque récompense les alignements de jetons d'un joueur à condition que l'autre joueur ne le bloque pas (matrice heuri). 
-Par la suite on compte le nombre de menaces du joueur, c'est à dire lorsque ce dernier à 3 jetons alignés non bloqués. Si le joueur possède 2 menaces permettant de gagner au prochain tour, l'autre joueur ne peut pas bloquer les 2 au tour suivant et donc le joueur obtient une très forte récompense. De manière triviale, la récompense est maximale lorsque 4 jetons sont alignés. 
+De manière simplifiée, l'heuristique récompense les alignements de jetons d'un joueur à condition que l'autre ne le bloque pas (matrice heuri). 
+Par la suite on compte le nombre de menaces du joueur, c'est à dire lorsque 3 jetons sont alignés et non bloqués. Si le joueur possède 2 menaces permettant de gagner au tour suivant, l'autre joueur ne pourra pas bloquer les 2 menaces, entrainant une très forte récompense. De manière triviale, la récompense est maximale lorsque 4 jetons sont alignés. 
 
-Enfin de réduire l'espace d'exploration des noeuds de l'arbre, nous utilisons l'étalage alpha-beta. Cette méthode permet d'optimiser grandement l'algorithme minimax sans en modifier le résultat. 
+Enfin, afin de réduire l'espace d'exploration des noeuds de l'arbre, nous utilisons l'étalage alpha-beta. Cette méthode permet d'optimiser grandement l'algorithme minimax sans en modifier le résultat. 
 
 ![png](alpha_beta.png)
 
