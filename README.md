@@ -2,7 +2,7 @@
 ## Abstrait
 
 Le jeu du puissance 4 étant un jeu à somme nul, autrement dit les pertes d'un joueur sont égales aux gains de l'autre, je me suis librement inspiré de l'algorithme MinMax. 
-## Algorithme Minimax
+## Algorithme Minimax et étalage alpha-beta
 
 L'algorithme minimax visite l'arbre de jeu pour faire remonter à la racine une valeur de jeu **f(p)** qui est calculée récursivement de la façon suivante :
 
@@ -16,3 +16,5 @@ De manière simplifiée, l'heuristque récompense les alignements de jetons d'un
 Par la suite on compte le nombre de menaces du joueur, c'est à dire lorsque ce dernier à 3 jetons alignés non bloqués. Si le joueur possède 2 menaces permettant de gagner au prochain tour, l'autre joueur ne peut pas bloquer les 2 au tour suivant et donc le joueur obtient une très forte récompense. De manière triviale, la récompense est maximale lorsque 4 jetons sont alignés. 
 
 Enfin de réduire l'espace d'exploration des noeuds de l'arbre, nous utilisons l'étalage alpha-beta. Cette méthode permet d'optimiser grandement l'algorithme minimax sans en modifier le résultat. 
+
+
